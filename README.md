@@ -1,43 +1,33 @@
-### Как запустить проект:
+:exclamation: ## Это промежуточная стадия разработки проекта https://github.com/IvanKiss42/kittygram_final  
 
-Клонировать репозиторий и перейти в него в командной строке:
+:smile_cat: Kittygram - блог о домашних питомцах всех расцветок и нравов. Пользователи могут создавать страницы своих питомцев с текстовым описанием, изображением и списком достижений.  
 
-```
-git clone https://github.com/yandex-praktikum/kittygram.git
-```
+:computer: Стек технологий: Python, библеотека  
 
-```
-cd kittygram
-```
+Данная версия предполагает только локальное использования и локальную провеку работы Django моделей, для этого:  
 
-Cоздать и активировать виртуальное окружение:
+Cоздайте и активируйте виртуальное окружение:
 
-```
-python3 -m venv env
+```bash
+python -m venv venv
+source venv/bin/activate
 ```
 
-```
-source env/bin/activate
-```
+Установите зависимости из файла requirements.txt:
 
-Установить зависимости из файла requirements.txt:
-
-```
-python3 -m pip install --upgrade pip
-```
-
-```
+```bash
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Выполнить миграции:
-
-```
-python3 manage.py migrate
+Выполните миграции:
+```bash
+python manage.py migrate
 ```
 
 Запустить проект:
-
+```bash
+python manage.py runserver
 ```
-python3 manage.py runserver
-```
+После этого будет доступен энпоинт http://127.0.0.1:8000/cats/ где можно увидеть базу питомцев и добавить своего  
+Добавляя цифровой индекс совпадающий с id существующего питомца вы получите эндпоинт для подробной информации о конкретном питомце
